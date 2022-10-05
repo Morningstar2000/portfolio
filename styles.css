@@ -33,21 +33,22 @@ nav{
     top: 0;
     text-align: center;
     z-index: 20;
-    grid-column: 1/4;
-    align-self: center;
+    /* align-self: center; */
 }
 nav ul{
     white-space: nowrap;
-    max-width: 80%;
-    margin: 0 auto;
-    padding: 0;
+    max-width: 100%;
+    padding: 0 10%;
+    grid-column: 1/9;
 }
 nav ul li{
-    width: 55%;
-    font-size: 70%;
+    width: 18%;
+    padding: auto;
+    font-size: 1.2em;
     display: inline-block;
     font-weight: bold;
     color: white;
+    margin: 0 auto;
 }
 nav ul a{
     color: white;
@@ -78,6 +79,10 @@ footer{
     background-color: rgba(218, 181, 20, 0.897);
     text-align: center;
     padding: 7px 0;
+    background-image: url(picss/bitcoin-15482.png);
+    background-size: 10%;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 footer a{
     color: wh;
@@ -86,7 +91,7 @@ footer a{
 footer p{
     grid-column: 1/9;
     text-align: center;
-    background-color: rgb(100, 91, 5);
+    background-color: rgba(100, 90, 5, 0.767);
     padding-top: 4px;
     padding-bottom: 4px;
 }
@@ -136,7 +141,7 @@ main p{
     font-size: 1.23em;
 }
 #details{
-    background: rgba(206, 172, 62, 0.247);
+    background-color: rgba(206, 172, 62, 0.671);
     padding: 10px 10px;
 }
 #details h3{
@@ -170,9 +175,9 @@ div ol li{
     font-family: Arial;
 }
 #exp{
-    background: linear-gradient(10deg, rgb(155, 141, 14), rgba(236, 225, 73, 0.664), rgb(167, 151, 13));
     padding: 10px 10px;
     font-family: Arial;
+    background: linear-gradient(10deg, rgb(155, 141, 14), rgba(236, 225, 73, 0.664), rgb(167, 151, 13));
 }
 #exp h3{
     margin-top: 10px;
@@ -193,6 +198,10 @@ div ol li{
 #exams{
     background-color: rgba(243, 230, 174, 0.082);
     padding: 10px 10px;
+    background-image: url(picss/bitcoin-15482.png);
+    background-size: 100%;
+    background-repeat: repeat;
+    background-position: top center;
 }
 #exams h3{
     margin-top: 10px;
@@ -216,7 +225,7 @@ div.exams1 li, div.exams1 img{
 div.exams1 li{
     padding: 5px 10px;
     margin: 10px auto;
-    background-color: rgb(223, 185, 83);
+    background-color: rgba(223, 186, 83, 0.801);
 }
 #p1{
     font-size: 1.3em;
@@ -276,13 +285,15 @@ div.picx{
     margin: 10px 0;
 }
 #pix2{
-    grid-column: 3/9;
+    grid-column: 1/9;
+    margin: 0 auto;
 }
 #pix3{
-    grid-column: 2/9;
+    grid-column: 1/9;
+    margin: 0 auto;
 }
 input, select, textarea{
-    width: 60%;
+    width: 50%;
     display: inline-block;
     margin-left: 20px;
     border: 0.5px solid black;
@@ -339,7 +350,7 @@ form h1{
     display: inline-block;
     width: 30%;
 }
-#submit:hover{
+#submit:focus{
     background-color: rgb(51, 50, 50);
     color: var(--secondary);
     font-size: 1.2em;
@@ -358,12 +369,19 @@ div.icon{
     width: 200%;
 }
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 370px){
     body{
         font-size: 12px;
         font-family: 'Times New Roman';
         background-color: var(--primary);
         overflow-x: hidden;
+    }
+    header p{
+        color: rgb(8, 8, 6);
+        text-shadow: 1px 1px 3px white;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 1.08em;
     }
     select{
         font: 0.5em;
@@ -378,6 +396,26 @@ div.icon{
         font-size: 1.2em;
         padding: 5px 5px;
         width: 20%;
+    }
+    #rp1{
+        font-size: 1.5em;
+        grid-column: 1/4;
+        grid-row: 2;
+    }
+    #rp2{
+        grid-column: 4/8;
+    grid-row: 1/4;
+    width: 50%;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    header p{
+        color: rgb(8, 8, 6);
+        text-shadow: 1px 1px 3px white;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-size: 1.1em;
     }
 }
 /* @media screen and (max-width: 550px){
